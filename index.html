@@ -666,349 +666,1265 @@
     </div>
     <script>
       function display() {
-        document.getElementById("login").style.display = "none";
-        document.getElementById("class").style.display = "block";
-        let username = document.getElementById("input").value;
-        if (
-          username == null ||
-          username == "" ||
-          username == " " ||
-          username == undefined
-        ) {
-          alert("Please enter a Name to Proceed!");
-          document.getElementById("login").style.display = "block";
-          document.getElementById("class").style.display = "none";
-        }
-        var time = new Date().getHours();
-        console.log(time);
-        if (time < 12) {
-          document.getElementById(
-            "salutation"
-          ).innerHTML = `<h2>Good Morning, ${username}</h2>`;
-        } else if (time > 12 && time <= 16) {
-          document.getElementById(
-            "salutation"
-          ).innerHTML = `<h2>Good Afternoon, ${username}</h2>`;
-        } else if (time >= 16 && time <= 24) {
-          document.getElementById(
-            "salutation"
-          ).innerHTML = `<h2>Good Evening, ${username}</h2>`;
-        }
-      }
+  document.getElementById("login").style.display = "none";
+  document.getElementById("class").style.display = "block";
+  let username = document.getElementById("input").value;
+  if (
+    username == null ||
+    username == "" ||
+    username == " " ||
+    username == undefined
+  ) {
+    alert("Please enter a Name to Proceed!");
+    document.getElementById("login").style.display = "block";
+    document.getElementById("class").style.display = "none";
+  }
+  var time = new Date().getHours();
+  console.log(time);
+  if (time < 12) {
+    document.getElementById(
+      "salutation"
+    ).innerHTML = `<h2>Good Morning, ${username}</h2>`;
+  } else if (time > 12 && time <= 16) {
+    document.getElementById(
+      "salutation"
+    ).innerHTML = `<h2>Good Afternoon, ${username}</h2>`;
+  } else if (time >= 16 && time <= 24) {
+    document.getElementById(
+      "salutation"
+    ).innerHTML = `<h2>Good Evening, ${username}</h2>`;
+  }
+}
 
-      function section() {
-        let classes = document.getElementById("classes").value;
-        if (
-          classes == "I" ||
-          classes == "II" ||
-          classes == "III" ||
-          classes == "IV" ||
-          classes == "V" ||
-          classes == "VI" ||
-          classes == "VII" ||
-          classes == "VIII" ||
-          classes == "Nursery" ||
-          classes == "Jr KG" ||
-          classes == "Sr KG" ||
-          classes == "IX" ||
-          classes == "X" ||
-          classes == "XI" ||
-          classes == "XII"
-        ) {
-          document.getElementById("class").style.display = "none";
-          document.getElementById("section").style.display = "block";
-        } else {
-          alert("Invalid Class Entered!");
-          document.getElementById("class").style.display = "block";
-          document.getElementById("section").style.display = "none";
-        }
-      }
+function section() {
+  let classes = document.getElementById("classes").value;
+  if (
+    classes == "I" ||
+    classes == "II" ||
+    classes == "III" ||
+    classes == "IV" ||
+    classes == "V" ||
+    classes == "VI" ||
+    classes == "VII" ||
+    classes == "VIII" ||
+    classes == "Nursery" ||
+    classes == "Jr KG" ||
+    classes == "Sr KG" ||
+    classes == "IX" ||
+    classes == "X" ||
+    classes == "XI" ||
+    classes == "XII"
+  ) {
+    document.getElementById("class").style.display = "none";
+    document.getElementById("section").style.display = "block";
+  } else {
+    alert("Invalid Class Entered!");
+    document.getElementById("class").style.display = "block";
+    document.getElementById("section").style.display = "none";
+  }
+}
 
-      function home() {
-        let section = document.getElementById("section-input").value;
-        let classes = document.getElementById("classes").value;
+function home() {
+  let section = document.getElementById("section-input").value;
+  let classes = document.getElementById("classes").value;
 
-        if (
-          classes == "Nursery" ||
-          classes == "Jr. Kg" ||
-          classes == "Jr. KG"
-        ) {
-          if (
-            section == "Adorable" ||
-            section == "Bold" ||
-            section == "Confident" ||
-            section == "ADORABLE" ||
-            section == "BOLD" ||
-            section == "CONFIDENT"
-          ) {
-            document.getElementById("section").style.display = "none";
-            document.getElementById("home").style.display = "block";
-          } else {
-            alert("Invalid Section Entered!");
-            document.getElementById("section").style.display = "block";
-            document.getElementById("home").style.display = "none";
-          }
-        } else if (classes == "Sr. KG" || classes == "Sr. Kg") {
-          if (
-            section == "Adorable" ||
-            section == "Bold" ||
-            section == "Confident" ||
-            section == "Diligent" ||
-            section == "ADORABLE" ||
-            section == "BOLD" ||
-            section == "CONFIDENT" ||
-            section == "DILIGENT"
-          ) {
-            document.getElementById("section").style.display = "none";
-            document.getElementById("home").style.display = "block";
-          } else {
-            alert("Invalid Section Entered!");
-            document.getElementById("section").style.display = "block";
-            document.getElementById("home").style.display = "none";
-          }
-        } else if (
-          classes == "I" ||
-          classes == "II" ||
-          classes == "III" ||
-          classes == "IV" ||
-          classes == "V" ||
-          classes == "VI" ||
-          classes == "VII" ||
-          classes == "VIII"
-        ) {
-          if (
-            section == "Adorable" ||
-            section == "Bold" ||
-            section == "Confident" ||
-            section == "Diligent" ||
-            section == "Elegant" ||
-            section == "CAIE" ||
-            section == "ADORABLE" ||
-            section == "BOLD" ||
-            section == "CONFIDENT" ||
-            section == "DILIGENT" ||
-            section == "ELEGANT" ||
-            section == "Caie" ||
-            section == "caie"
-          ) {
-            document.getElementById("section").style.display = "none";
-            document.getElementById("home").style.display = "block";
-          } else {
-            alert("Invalid Section Entered!");
-            document.getElementById("section").style.display = "block";
-            document.getElementById("home").style.display = "none";
-          }
-        } else if (classes == "IX" || classes == "X") {
-          if (
-            section == "Adorable" ||
-            section == "Bold" ||
-            section == "Confident" ||
-            section == "Diligent" ||
-            section == "Elegant" ||
-            section == "CAIE" ||
-            section == "ADORABLE" ||
-            section == "BOLD" ||
-            section == "CONFIDENT" ||
-            section == "DILIGENT" ||
-            section == "ELEGANT" ||
-            section == "Caie" ||
-            section == "caie" ||
-            section == "Fabulous" ||
-            section == "FABULOUS"
-          ) {
-            document.getElementById("section").style.display = "none";
-            document.getElementById("home").style.display = "block";
-          } else {
-            alert("Invalid Section Entered!");
-            document.getElementById("section").style.display = "block";
-            document.getElementById("home").style.display = "none";
-          }
-        } else if (classes == "XI" || classes == "XII") {
-          if (
-            section == "Arts Adorable" ||
-            section == "Arts Bold" ||
-            section == "Com Adorable" ||
-            section == "Com Bold" ||
-            section == "Sci Adorable" ||
-            section == "Sci Bold"
-          ) {
-            document.getElementById("section").style.display = "none";
-            document.getElementById("home").style.display = "block";
-            localStorage.setItem("Home Page", "true");
-            location.reload ==
-              function () {
-                var show = localStorage.getItem("Home Page");
-                if (show == "true") {
-                  document.getElementById("home").style.display = "block";
-                }
-              };
-          } else {
-            alert("Invalid Section Entered!");
-            document.getElementById("section").style.display = "block";
-            document.getElementById("home").style.display = "none";
-          }
-        } else {
-          alert("Invalid Section Entered!");
-          document.getElementById("section").style.display = "block";
-          document.getElementById("home").style.display = "none";
-        }
-      }
+  if (classes == "Nursery" || classes == "Jr. Kg" || classes == "Jr. KG") {
+    if (
+      section == "Adorable" ||
+      section == "Bold" ||
+      section == "Confident" ||
+      section == "ADORABLE" ||
+      section == "BOLD" ||
+      section == "CONFIDENT"
+    ) {
+      document.getElementById("section").style.display = "none";
+      document.getElementById("home").style.display = "block";
+    } else {
+      alert("Invalid Section Entered!");
+      document.getElementById("section").style.display = "block";
+      document.getElementById("home").style.display = "none";
+    }
+  } else if (classes == "Sr. KG" || classes == "Sr. Kg") {
+    if (
+      section == "Adorable" ||
+      section == "Bold" ||
+      section == "Confident" ||
+      section == "Diligent" ||
+      section == "ADORABLE" ||
+      section == "BOLD" ||
+      section == "CONFIDENT" ||
+      section == "DILIGENT"
+    ) {
+      document.getElementById("section").style.display = "none";
+      document.getElementById("home").style.display = "block";
+    } else {
+      alert("Invalid Section Entered!");
+      document.getElementById("section").style.display = "block";
+      document.getElementById("home").style.display = "none";
+    }
+  } else if (
+    classes == "I" ||
+    classes == "II" ||
+    classes == "III" ||
+    classes == "IV" ||
+    classes == "V" ||
+    classes == "VI" ||
+    classes == "VII" ||
+    classes == "VIII"
+  ) {
+    if (
+      section == "Adorable" ||
+      section == "Bold" ||
+      section == "Confident" ||
+      section == "Diligent" ||
+      section == "Elegant" ||
+      section == "CAIE" ||
+      section == "ADORABLE" ||
+      section == "BOLD" ||
+      section == "CONFIDENT" ||
+      section == "DILIGENT" ||
+      section == "ELEGANT" ||
+      section == "Caie" ||
+      section == "caie"
+    ) {
+      document.getElementById("section").style.display = "none";
+      document.getElementById("home").style.display = "block";
+    } else {
+      alert("Invalid Section Entered!");
+      document.getElementById("section").style.display = "block";
+      document.getElementById("home").style.display = "none";
+    }
+  } else if (classes == "IX" || classes == "X") {
+    if (
+      section == "Adorable" ||
+      section == "Bold" ||
+      section == "Confident" ||
+      section == "Diligent" ||
+      section == "Elegant" ||
+      section == "CAIE" ||
+      section == "ADORABLE" ||
+      section == "BOLD" ||
+      section == "CONFIDENT" ||
+      section == "DILIGENT" ||
+      section == "ELEGANT" ||
+      section == "Caie" ||
+      section == "caie" ||
+      section == "Fabulous" ||
+      section == "FABULOUS"
+    ) {
+      document.getElementById("section").style.display = "none";
+      document.getElementById("home").style.display = "block";
+    } else {
+      alert("Invalid Section Entered!");
+      document.getElementById("section").style.display = "block";
+      document.getElementById("home").style.display = "none";
+    }
+  } else if (classes == "XI" || classes == "XII") {
+    if (
+      section == "Arts Adorable" ||
+      section == "Arts Bold" ||
+      section == "Com Adorable" ||
+      section == "Com Bold" ||
+      section == "Sci Adorable" ||
+      section == "Sci Bold"||
+      section == "ARTS ADORABLE"||
+      section == "ARTS BOLD"||
+      section == "SCI ADORABLE"||
+      section == "SCI BOLD"||
+      section == "COM ADORABLE"||
+      section == "COM BOLD"||
+      section == "COMMERCE ADORABLE"||
+      section == "COMMERCE BOLD"||
+      section == "SCIENCE ADORABLE"||
+      section == "SCIENCE BOLD"||
+      section == "Commerce Adorable"||
+      section == "Commerce Bold"||
+      section == "Science Adorable"||
+      section == "Science Bold"
+    ) {
+      document.getElementById("section").style.display = "none";
+      document.getElementById("home").style.display = "block";
+    } else {
+      alert("Invalid Section Entered!");
+      document.getElementById("section").style.display = "block";
+      document.getElementById("home").style.display = "none";
+    }
+  } else {
+    alert("Invalid Section Entered!");
+    document.getElementById("section").style.display = "block";
+    document.getElementById("home").style.display = "none";
+  }
+}
 
-      function homework() {
-        let section = document.getElementById("section-input").value;
-        let classes = document.getElementById("classes").value;
-        window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${
+function homework() {
+  let section = document.getElementById("section-input").value;
+  let classes = document.getElementById("classes").value;
+  window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${
+    document.getElementById("classes").value
+  }_${document.getElementById("section-input").value}&SecurityKey=8584`;
+
+  let XIXIIsection = String(section).split(" ");
+  if (classes == "XI" || classes == "XII") {
+    window.location = ` http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_${XIXIIsection[0]}_${XIXIIsection[1]}&SecurityKey=`;
+  }
+  if (classes == 'XI' || classes == 'XII' && section == 'COMMERCE ADORABLE' || section == 'Commerce Adorable') {
+    window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Com_Adorable&SecurityKey=8584`;
+  }
+  else if (classes == 'XI' || classes == 'XII' && section == 'COMMERCE ADORABLE' || section == 'Commerce Adorable') {
+    window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Com_Adorable&SecurityKey=8584`;
+  }
+  else if (classes == 'XI' || classes == 'XII' && section == 'COMMERCE BOLD' || section == 'Commerce Bold') {
+    window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Com_Bold&SecurityKey=8584`;
+  }
+  else if (classes == 'XI' || classes == 'XII' && section == 'SCIENCE ADORABLE' || section == 'Science Adorable') {
+    window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Sci_Adorable&SecurityKey=8584`;
+  }
+  else if (classes == 'XI' || classes == 'XII' && section == 'SCIENCE BOLD' || section == 'Science Bold') {
+    window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Sci_Bold&SecurityKey=8584`;
+  }
+}
+
+function syllabus() {
+  let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+  if (classes == "Nursery" || classes == "Jr. Kg" || classes == "Jr. KG") {
+    let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+    if (subject == "English Written"  || subject == "ENGLISH WRITTEN") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${document.getElementById("classes").value}&SUBJECT=English_Written`, '_blank');
+    } 
+    else if (subject == "Mathematics Written" || subject == "MATHEMATICS WRITTEN") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Mathematics_Written`, '_blank');
+    } 
+    else if (subject == "English Oral" || subject == "ENGLISH ORAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=English_Oral`, '_blank');
+    } 
+    else if (subject == "Mathematics Oral" || subject == "MATHEMATICS ORAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Mathematics_Oral`, '_blank');
+    }
+    else if (subject == "Hindi Oral" || subject == "HINDI ORAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Hindi_Oral`, '_blank');
+    }
+    else if (subject == "Hindi Written" || subject == "HINDI WRITTEN") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Hindi_Written`, '_blank');
+    }
+    else if (subject == "General Awareness Written" || subject == "GENERAL AWARENESS WRITTEN") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=General_Awareness_Written`, '_blank');
+    }
+    else if (subject == "General Awareness Oral" || subject == "GENERAL AWARENESS ORAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=General_Awareness_Oral`, '_blank');
+    }
+  }
+  else if (classes == 'Sr. Kg' || classes == 'Sr. KG') {
+    let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+    if (subject == "English Written" || subject == "ENGLISH WRITTEN") {
+      window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${document.getElementById("classes").value}&SUBJECT=English_Written`, '_blank');
+    } 
+    else if (subject == "Mathematics Written" || subject == "MATHEMATICS WRITTEN") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Mathematics_Written`, '_blank');
+    } 
+    else if (subject == "English Oral" || subject == "ENGLISH ORAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=English_Oral`, '_blank');
+    } 
+    else if (subject == "Hindi Oral" || subject == "HINDI ORAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Hindi_Oral`, '_blank');
+    }
+    else if (subject == "Hindi Written" || subject == "HINDI WRITTEN") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Hindi_Written`, '_blank');
+    }
+    else if (subject == "General Awareness Written" || subject == "GENERAL AWARENESS WRITTEN") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=General_Awareness_Written`, '_blank');
+    }
+    else if (subject == "General Awareness Oral" || subject == "GENERAL AWARENESS ORAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=General_Awareness_Oral`, '_blank');
+    }
+  }
+  else if (classes == 'I' || classes == 'II' || classes == 'III' || classes == 'IV' || classes == 'V') {
+    let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+    if (subject == "General Knowledge"  || subject == 'GENERAL KNOWLEDGE') {
+      window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${classes}&SUBJECT=General_Knowledge`, '_blank');
+    } else if (subject == "English"  || subject == 'ENGLISH') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Mathematics" || subject == 'MATHEMATICS') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Hindi" || subject == 'HINDI') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Punjabi" ||subject == "PUNJABI") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    }
+     else if (subject == "Computer Application" ||subject == "COMPUTER APPLICATION") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Computer_Application`, '_blank');
+    }
+    else if (subject == "Environmental Studies" ||subject == "ENVIRONMENTAL STUDIES") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Environmental_Studies`, '_blank');
+     } else {
+      alert("Invalid Subject Entered!");
+      document.getElementById("syllabus").style.display = "block";
+    }
+  }
+  else if (classes == 'VI' || classes == 'VII') {
+    let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+    if (subject == "General Knowledge"  || subject == 'GENERAL KNOWLEDGE') {
+      window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${classes}&SUBJECT=General_Knowledge`, '_blank');
+    } else if (subject == "English"  || subject == 'ENGLISH') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Mathematics" ||subject == 'MATHEMATICS') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Hindi" ||subject == 'HINDI') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Punjabi" ||subject == "PUNJABI") {
+      window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`;
+    } else if (subject == "Science" ||subject == "SCIENCE") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Social Science" ||subject == "SOCIAL SCIENCE") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+    }
+    else if (subject == "sst" ||subject == "SST") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+    }
+    else if (subject == "Social Studies" || subject == "SOCIAL STUDIES") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+     }
+     else if (subject == "Computer Application" || subject == "COMPUTER APPLICATION") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Computer_Application`, '_blank');
+     }
+     else if (subject == "Environmental Studies" || subject == "ENVIRONMENTAL STUDIES") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Environmental_Studies`, '_blank');
+     }
+      else {
+      alert("Invalid Subject Entered!");
+      document.getElementById("syllabus").style.display = "block";
+    }
+  }
+  else if (classes == 'VIII') {
+    let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+    if (subject == "General Knowledge"  || subject == 'GENERAL KNOWLEDGE') {
+      window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${classes}&SUBJECT=General_Knowledge`, '_blank');
+    } else if (subject == "English"  || subject == 'ENGLISH') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Mathematics" ||subject == 'MATHEMATICS') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Hindi" || subject == 'HINDI') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Punjabi" ||subject == "PUNJABI") {
+      window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`;
+    } else if (subject == "Science" ||subject == "SCIENCE") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Social Science" || subject == "SOCIAL SCIENCE") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+    }
+    else if (subject == "Social Studies" || subject == "SOCIAL STUDIES") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+     }
+     else if (subject == "sst" ||subject ==  "SST") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+    }
+     else if (subject == "Environmental Studies" || subject == "ENVIRONMENTAL STUDIES") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Environmental_Studies`, '_blank');
+     }
+      else {
+      alert("Invalid Subject Entered!");
+      document.getElementById("syllabus").style.display = "block";
+    }
+  }
+  else if (classes == 'IX' || classes == 'X') {
+    let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+   if (subject == "English" || subject == 'ENGLISH') {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=${subject}`, '_blank');
+  } else if (subject == "Mathematics" ||subject ==  'MATHEMATICS') {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=${subject}`, '_blank');
+  } else if (subject == "Hindi" || subject == 'HINDI') {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=${subject}`, '_blank');
+  } else if (subject == "Punjabi" ||subject ==  "PUNJABI") {
+    window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=${subject}`;
+  } else if (subject == "Science" ||subject ==  "SCIENCE") {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=${subject}`, '_blank');
+  } else if (subject == "Social Science" ||subject ==  "SOCIAL SCIENCE") {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=Social_Science`, '_blank');
+  }
+  else if (subject == "sst" || subject == "SST") {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=Social_Science`, '_blank');
+  }
+  else if (subject == "Social Studies" ||subject ==  "SOCIAL STUDIES") {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=Social_Science`, '_blank');
+   }
+   else if (subject == "Information Technology" ||subject ==  "INFORMATION TECHNOLOGY") {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=Information_Technology`, '_blank');
+   } else {
+    alert("Invalid Subject Entered!");
+    document.getElementById("syllabus").style.display = "block";
+  }
+  }
+  else if (classes == 'XI') {
+    let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+    if (subject == "English" || subject == 'ENGLISH') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    }
+      else if (subject == "Physical Education" || subject == "PHYSICAL EDUCATION") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
           document.getElementById("classes").value
-        }_${document.getElementById("section-input").value}&SecurityKey=8584`;
+        }&SUBJECT=Physical_Education`, '_blank');
+    }
+    else if (subject == "Dance" || subject == 'DANCE') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+     } 
+     else if (subject == "Music Instrumental" || subject == "MUSIC INSTRUMENTAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Music_Instrumental`, '_blank');
+  }
+  else if (subject == "Physics" || subject == "PHYSICS") {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=Physics`, '_blank');
+}
+     else if (subject == "Chemistry" || subject == 'CHEMISTRY') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Chemistry`, '_blank');
+    } 
+    else if (subject == "Accounts" ||subject == 'ACCOUNTS') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Accounts`, '_blank');
+    }
+    else if (subject == "Business Studies" ||subject == 'BUSINESS STUDIES') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Business_Studies`, '_blank');
+    }
+    else if (subject == "Economics" ||subject == 'ECONOMICS') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Economics`, '_blank');
+    }
+    else if (subject == "Political Science" ||subject == 'POLITICAL SCIENCE') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Political_Science`, '_blank');
+    }
+    else if (subject == "History" ||subject == 'HISTORY') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=History`, '_blank');
+    } 
+    else if (subject == "Psychology" ||subject == 'PSYCHOLOGY') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Psychology`, '_blank');
+    }
+    else if (subject == "Home Science" ||subject == 'HOME SCIENCE') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Home_Science`, '_blank');
+    }
+     else if (subject == "Punjabi" ||subject == "PUNJABI") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`,'_blank');
+    } 
+    else if (subject == "Biology" ||subject == "BIOLOGY") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    }
+     else if (subject == "Information Technology" ||subject == "INFORMATION TECHNOLOGY") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Information_Technology`, '_blank');
+     } else {
+      alert("Invalid Subject Entered!");
+      document.getElementById("syllabus").style.display = "block";
+    }
+  }
+  else if (classes == 'XII') {
+    let subject = document.getElementById("syllabus-input").value;
+  let classes = document.getElementById("classes").value;
+    if (subject == "English" || subject == 'ENGLISH') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    }
+      else if (subject == "Physical Education" || subject == "PHYSICAL EDUCATION") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Physical_Education`, '_blank');
+    }
+    else if (subject == "Painting" || subject == "PAINTING") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Painting`, '_blank');
+  }
+    else if (subject == "Dance" || subject == 'DANCE') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+     } 
+     else if (subject == "Music Instrumental" || subject == "MUSIC INSTRUMENTAL") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Music_Instrumental`, '_blank');
+  }
+  else if (subject == "Physics" || subject == "PHYSICS") {
+    window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+      document.getElementById("classes").value
+    }&SUBJECT=Physics`, '_blank');
+}
+     else if (subject == "Chemistry" || subject == 'CHEMISTRY') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Chemistry`, '_blank');
+    } 
+    else if (subject == "Accounts" ||subject == 'ACCOUNTS') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Accounts`, '_blank');
+    }
+    else if (subject == "Business Studies" ||subject == 'BUSINESS STUDIES') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Business_Studies`, '_blank');
+    }
+    else if (subject == "Economics" ||subject == 'ECONOMICS') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Economics`, '_blank');
+    }
+    else if (subject == "Political Science" ||subject == 'POLITICAL SCIENCE') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Political_Science`, '_blank');
+    }
+    else if (subject == "History" ||subject == 'HISTORY') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=History`, '_blank');
+    } 
+    else if (subject == "Psychology" ||subject == 'PSYCHOLOGY') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Psychology`, '_blank');
+    }
+    else if (subject == "Home Science" ||subject == 'HOME SCIENCE') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Home_Science`, '_blank');
+    }
+     else if (subject == "Punjabi" ||subject == "PUNJABI") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } 
+    else if (subject == "Biology" ||subject == "BIOLOGY") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`,'_blank');
+    }
+     else if (subject == "Information Technology" ||subject == "INFORMATION TECHNOLOGY") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Information_Technology`, '_blank');
+     } else {
+      alert("Invalid Subject Entered!");
+      document.getElementById("syllabus").style.display = "block";
+    }
+  }
+  }
 
-        let XIXIIsection = String(section).split(" ");
-        if (classes == "XI" || classes == "XII") {
-          window.location = ` http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_${XIXIIsection[0]}_${XIXIIsection[1]}&SecurityKey=`;
-        }
+function timetable() {
+  window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/ClassesTimeTableLogin.php`;
+}
+
+function subject() {
+  document.getElementById("home").style.display = "none";
+  document.getElementById("syllabus").style.display = "block";
+}
+
+let profile = document.getElementById("profile");
+let randomNum = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+];
+
+function random() {
+  return parseInt(Math.random() * randomNum.length);
+}
+profile.src = `https://avatars.dicebear.com/4.9/api/micah/:seed${random()}.svg`;
+
+let input = document.getElementById("input");
+input.addEventListener("keyup", function (event) {
+  event.preventDefault();
+  if (event.key === "Enter") {
+    document.getElementById("button1").click();
+  }
+});
+
+let input2 = document.getElementById("classes");
+input2.addEventListener("keyup", function (event) {
+  event.preventDefault();
+  if (event.key === "Enter") {
+    document.getElementById("button2").click();
+  }
+});
+
+let input3 = document.getElementById("section-input");
+input3.addEventListener("keyup", function (event) {
+  event.preventDefault();
+  if (event.key === "Enter") {
+    document.getElementById("button3").click();
+  }
+});
+
+let input4 = document.getElementById("syllabus-input");
+input4.addEventListener("keyup", function (event) {
+  event.preventDefault();
+  if (event.key === "Enter") {
+    document.getElementById("button4").click();
+  }
+});
+//  document.getElementById('home').style.display = "block";
+//  if(document.getElementById('home').style.display == "block") {
+//     document.getElementById('home').style.display = "block";
+//     localStorage.setItem('show', 'true'); //store state in localStorage
+// };
+// window.onload() = function() {
+//     var show = localStorage.getItem('show');
+//     if(show === 'true'){
+//          document.getElementById('home').style.display = "block";
+//     }
+// }
+function showHome() {
+  let username = document.getElementById("input").value;
+  let syllabusMain = document.getElementById("syllabus-input").value;
+  let sectionMain = document.getElementById("section-input").value;
+  let classesMain = document.getElementById("classes").value;
+  document.getElementById("home").style.display = "block";
+  localStorage.setItem("show", "true");
+  localStorage.setItem("name", username);
+  localStorage.setItem("syllabus", syllabusMain);
+  localStorage.setItem("section", sectionMain);
+  localStorage.setItem("classes", classesMain);
+}
+window.onload = function () {
+  var show = localStorage.getItem("show");
+  var name = localStorage.getItem("name");
+  if (show === "true") {
+    var time = new Date().getHours();
+    console.log(time);
+    if (time < 12) {
+      document.getElementById(
+        "salutation"
+      ).innerHTML = `<h2>Good Morning, ${name}</h2>`;
+    } else if (time > 12 && time <= 16) {
+      document.getElementById(
+        "salutation"
+      ).innerHTML = `<h2>Good Afternoon, ${name}</h2>`;
+    } else if (time >= 16 && time <= 24) {
+      document.getElementById(
+        "salutation"
+      ).innerHTML = `<h2>Good Evening,${name}</h2>`;
+    }
+    document.getElementById("home").style.display = "block";
+    document.getElementById("login").style.display = "none";
+    document.getElementById("section").style.display = "none";
+    document.getElementById("syllabus").style.display = "none";
+    document.getElementById("class").style.display = "none";
+  }
+  let home = document.getElementById('home');
+  home.onload = function() {
+  let homework_button = document.getElementById("homework_button");
+  homework_button.addEventListener("onclick", function() {
+    var classes = localStorage.getItem("classes");
+    var section = localStorage.getItem("section");
+    window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_${section}&SecurityKey=8584`;
+
+    let XIXIIsection = String(section).split(" ");
+    if (classes == "XI" || classes == "XII") {
+      window.location = ` http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_${XIXIIsection[0]}_${XIXIIsection[1]}&SecurityKey=`;
+    }
+    else if (classes == 'XI' || classes == 'XII' && section == 'COMMERCE ADORABLE' || section == 'Commerce Adorable') {
+      window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Com_Adorable&SecurityKey=8584`;
+    }
+    else if (classes == 'XI' || classes == 'XII' && section == 'COMMERCE BOLD' || section == 'Commerce Bold') {
+      window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Com_Bold&SecurityKey=8584`;
+    }
+    else if (classes == 'XI' || classes == 'XII' && section == 'SCIENCE ADORABLE' || section == 'Science Adorable') {
+      window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Sci_Adorable&SecurityKey=8584`;
+    }
+    else if (classes == 'XI' || classes == 'XII' && section == 'SCIENCE BOLD' || section == 'Science Bold') {
+      window.location = `http://www.gobindgarhpublicschool.in/Examination/CBSEHomeWork/StudentsHomeWorkView.php?CLASS=${classes}_Sci_Bold&SecurityKey=8584`;
+    }
+  });
+
+  let subject_button = document.getElementById("subject_button");
+  subject_button.addEventListener("onclick", function() {
+    let classes = localStorage.getItem("classes");
+    if (classes == "Nursery" || classes == "Jr. Kg" || classes == "Jr. KG") {
+      let subject = document.getElementById("syllabus-input").value;
+      if (subject == "English Written"  || subject == "ENGLISH WRITTEN") {
+        window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${document.getElementById("classes").value}&SUBJECT=English_Written`, '_blank');
+      } 
+      else if (subject == "Mathematics Written" || subject == "MATHEMATICS WRITTEN") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Mathematics_Written`, '_blank');
+      } 
+      else if (subject == "English Oral" || subject == "ENGLISH ORAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=English_Oral`, '_blank');
+      } 
+      else if (subject == "Mathematics Oral" || subject == "MATHEMATICS ORAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Mathematics_Oral`, '_blank');
       }
-
-      function syllabus() {
-        let subject = document.getElementById("syllabus-input").value;
-        if (subject == "Social Studies") {
-          window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=VIII&SUBJECT=Social_Science`;
-        } else if (subject == "General Knowledge") {
-          window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=VIII&SUBJECT=General_Knowledge`;
-        } else if (subject == "English") {
-          window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
-            document.getElementById("classes").value
-          }&SUBJECT=${subject}`;
-        } else if (subject == "Mathematics") {
-          window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
-            document.getElementById("classes").value
-          }&SUBJECT=${subject}`;
-        } else if (subject == "Hindi") {
-          window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
-            document.getElementById("classes").value
-          }&SUBJECT=${subject}`;
-        } else if (subject == "Punjabi") {
-          window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
-            document.getElementById("classes").value
-          }&SUBJECT=${subject}`;
-        } else if (subject == "Science") {
-          window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
-            document.getElementById("classes").value
-          }&SUBJECT=${subject}`;
-        } else if (subject == "Social Science") {
-          window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
-            document.getElementById("classes").value
-          }&SUBJECT=${subject}`;
-        } else {
-          alert("Invalid Subject Entered!");
-          document.getElementById("syllabus").style.display = "block";
-        }
+      else if (subject == "Hindi Oral" || subject == "HINDI ORAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Hindi_Oral`, '_blank');
       }
-
-      function timetable() {
-        window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/ClassesTimeTableLogin.php`;
+      else if (subject == "Hindi Written" || subject == "HINDI WRITTEN") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Hindi_Written`, '_blank');
       }
-
-      function subject() {
-        document.getElementById("home").style.display = "none";
+      else if (subject == "General Awareness Written" || subject == "GENERAL AWARENESS WRITTEN") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=General_Awareness_Written`, '_blank');
+      }
+      else if (subject == "General Awareness Oral" || subject == "GENERAL AWARENESS ORAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=General_Awareness_Oral`, '_blank');
+      }
+    }
+    else if (classes == 'Sr. Kg' || classes == 'Sr. KG') {
+      let subject = document.getElementById("syllabus-input").value;
+    let classes = document.getElementById("classes").value;
+      if (subject == "English Written" || subject == "ENGLISH WRITTEN") {
+        window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${document.getElementById("classes").value}&SUBJECT=English_Written`, '_blank');
+      } 
+      else if (subject == "Mathematics Written" || subject == "MATHEMATICS WRITTEN") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Mathematics_Written`, '_blank');
+      } 
+      else if (subject == "English Oral" || subject == "ENGLISH ORAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=English_Oral`, '_blank');
+      } 
+      else if (subject == "Hindi Oral" || subject == "HINDI ORAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Hindi_Oral`, '_blank');
+      }
+      else if (subject == "Hindi Written" || subject == "HINDI WRITTEN") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Hindi_Written`, '_blank');
+      }
+      else if (subject == "General Awareness Written" || subject == "GENERAL AWARENESS WRITTEN") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=General_Awareness_Written`, '_blank');
+      }
+      else if (subject == "General Awareness Oral" || subject == "GENERAL AWARENESS ORAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=General_Awareness_Oral`, '_blank');
+      }
+    }
+    else if (classes == 'I' || classes == 'II' || classes == 'III' || classes == 'IV' || classes == 'V') {
+      let subject = document.getElementById("syllabus-input").value;
+    let classes = document.getElementById("classes").value;
+      if (subject == "General Knowledge"  || subject == 'GENERAL KNOWLEDGE') {
+        window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${classes}&SUBJECT=General_Knowledge`, '_blank');
+      } else if (subject == "English"  || subject == 'ENGLISH') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Mathematics" || subject == 'MATHEMATICS') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Hindi" || subject == 'HINDI') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Punjabi" ||subject == "PUNJABI") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      }
+       else if (subject == "Computer Application" ||subject == "COMPUTER APPLICATION") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Computer_Application`, '_blank');
+      }
+      else if (subject == "Environmental Studies" ||subject == "ENVIRONMENTAL STUDIES") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Environmental_Studies`, '_blank');
+       } else {
+        alert("Invalid Subject Entered!");
         document.getElementById("syllabus").style.display = "block";
       }
-
-      let profile = document.getElementById("profile");
-      let randomNum = [
-        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-      ];
-
-      function random() {
-        return parseInt(Math.random() * randomNum.length);
+    }
+    else if (classes == 'VI' || classes == 'VII') {
+      let subject = document.getElementById("syllabus-input").value;
+    let classes = document.getElementById("classes").value;
+      if (subject == "General Knowledge"  || subject == 'GENERAL KNOWLEDGE') {
+        window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${classes}&SUBJECT=General_Knowledge`, '_blank');
+      } else if (subject == "English"  || subject == 'ENGLISH') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Mathematics" ||subject == 'MATHEMATICS') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Hindi" ||subject == 'HINDI') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Punjabi" ||subject == "PUNJABI") {
+        window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`;
+      } else if (subject == "Science" ||subject == "SCIENCE") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Social Science" ||subject == "SOCIAL SCIENCE") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Social_Science`, '_blank');
       }
-      profile.src = `https://avatars.dicebear.com/4.9/api/micah/:seed${random()}.svg`;
-
-      let input = document.getElementById("input");
-      input.addEventListener("keyup", function (event) {
-        event.preventDefault();
-        if (event.key === "Enter") {
-          document.getElementById("button1").click();
-        }
-      });
-
-      let input2 = document.getElementById("classes");
-      input2.addEventListener("keyup", function (event) {
-        event.preventDefault();
-        if (event.key === "Enter") {
-          document.getElementById("button2").click();
-        }
-      });
-
-      let input3 = document.getElementById("section-input");
-      input3.addEventListener("keyup", function (event) {
-        event.preventDefault();
-        if (event.key === "Enter") {
-          document.getElementById("button3").click();
-        }
-      });
-
-      let input4 = document.getElementById("syllabus-input");
-      input4.addEventListener("keyup", function (event) {
-        event.preventDefault();
-        if (event.key === "Enter") {
-          document.getElementById("button4").click();
-        }
-      });
-      //  document.getElementById('home').style.display = "block";
-      //  if(document.getElementById('home').style.display == "block") {
-      //     document.getElementById('home').style.display = "block";
-      //     localStorage.setItem('show', 'true'); //store state in localStorage
-      // };
-      // window.onload() = function() {
-      //     var show = localStorage.getItem('show');
-      //     if(show === 'true'){
-      //          document.getElementById('home').style.display = "block";
-      //     }
-      // }
-      function showHome() {
-        let username = document.getElementById("input").value;
-        document.getElementById("home").style.display = "block";
-        localStorage.setItem("show", "true");
-        localStorage.setItem("name", username);
+      else if (subject == "sst" ||subject == "SST") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Social_Science`, '_blank');
       }
-      window.onload = function () {
-        var show = localStorage.getItem("show");
-        var name = localStorage.getItem("name");
-        if (show === "true") {
-          var time = new Date().getHours();
-          console.log(time);
-          if (time < 12) {
-            document.getElementById(
-              "salutation"
-            ).innerHTML = `<h2>Good Morning, ${name}</h2>`;
-          } else if (time > 12 && time <= 16) {
-            document.getElementById(
-              "salutation"
-            ).innerHTML = `<h2>Good Afternoon, ${name}</h2>`;
-          } else if (time >= 16 && time <= 24) {
-            document.getElementById(
-              "salutation"
-            ).innerHTML = `<h2>Good Evening,${name}</h2>`;
-          }
-          document.getElementById("home").style.display = "block";
-          document.getElementById("login").style.display = "none";
-          document.getElementById("section").style.display = "none";
-          document.getElementById("syllabus").style.display = "none";
-          document.getElementById("class").style.display = "none";
-        }
-      };
-
-      function removeitem() {
-        localStorage.removeItem("show");
-        localStorage.removeItem("name");
-        if (
-          localStorage.length !== 0 ||
-          localStorage.length !== undefined ||
-          localStorage.length !== null
-        ) {
-          document.getElementById("home").style.display = "none";
-          document.getElementById("login").style.display = "block";
-        }
+      else if (subject == "Social Studies" || subject == "SOCIAL STUDIES") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Social_Science`, '_blank');
+       }
+       else if (subject == "Computer Application" || subject == "COMPUTER APPLICATION") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Computer_Application`, '_blank');
+       }
+       else if (subject == "Environmental Studies" || subject == "ENVIRONMENTAL STUDIES") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Environmental_Studies`, '_blank');
+       }
+        else {
+        alert("Invalid Subject Entered!");
+        document.getElementById("syllabus").style.display = "block";
       }
+    }
+    else if (classes == 'VIII') {
+      let subject = document.getElementById("syllabus-input").value;
+    let classes = document.getElementById("classes").value;
+      if (subject == "General Knowledge"  || subject == 'GENERAL KNOWLEDGE') {
+        window.open (`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${classes}&SUBJECT=General_Knowledge`, '_blank');
+      } else if (subject == "English"  || subject == 'ENGLISH') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Mathematics" ||subject == 'MATHEMATICS') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Hindi" || subject == 'HINDI') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Punjabi" ||subject == "PUNJABI") {
+        window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`;
+      } else if (subject == "Science" ||subject == "SCIENCE") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } else if (subject == "Social Science" || subject == "SOCIAL SCIENCE") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Social_Science`, '_blank');
+      }
+      else if (subject == "Social Studies" || subject == "SOCIAL STUDIES") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Social_Science`, '_blank');
+       }
+       else if (subject == "sst" ||subject ==  "SST") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Social_Science`, '_blank');
+      }
+       else if (subject == "Environmental Studies" || subject == "ENVIRONMENTAL STUDIES") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Environmental_Studies`, '_blank');
+       }
+        else {
+        alert("Invalid Subject Entered!");
+        document.getElementById("syllabus").style.display = "block";
+      }
+    }
+    else if (classes == 'IX' || classes == 'X') {
+      let subject = document.getElementById("syllabus-input").value;
+    let classes = document.getElementById("classes").value;
+     if (subject == "English" || subject == 'ENGLISH') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Mathematics" ||subject ==  'MATHEMATICS') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Hindi" || subject == 'HINDI') {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Punjabi" ||subject ==  "PUNJABI") {
+      window.location = `http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`;
+    } else if (subject == "Science" ||subject ==  "SCIENCE") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=${subject}`, '_blank');
+    } else if (subject == "Social Science" ||subject ==  "SOCIAL SCIENCE") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+    }
+    else if (subject == "sst" || subject == "SST") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+    }
+    else if (subject == "Social Studies" ||subject ==  "SOCIAL STUDIES") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Social_Science`, '_blank');
+     }
+     else if (subject == "Information Technology" ||subject ==  "INFORMATION TECHNOLOGY") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Information_Technology`, '_blank');
+     } else {
+      alert("Invalid Subject Entered!");
+      document.getElementById("syllabus").style.display = "block";
+    }
+    }
+    else if (classes == 'XI') {
+      let subject = document.getElementById("syllabus-input").value;
+    let classes = document.getElementById("classes").value;
+      if (subject == "English" || subject == 'ENGLISH') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      }
+        else if (subject == "Physical Education" || subject == "PHYSICAL EDUCATION") {
+          window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+            document.getElementById("classes").value
+          }&SUBJECT=Physical_Education`, '_blank');
+      }
+      else if (subject == "Dance" || subject == 'DANCE') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+       } 
+       else if (subject == "Music Instrumental" || subject == "MUSIC INSTRUMENTAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Music_Instrumental`, '_blank');
+    }
+    else if (subject == "Physics" || subject == "PHYSICS") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Physics`, '_blank');
+  }
+       else if (subject == "Chemistry" || subject == 'CHEMISTRY') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Chemistry`, '_blank');
+      } 
+      else if (subject == "Accounts" ||subject == 'ACCOUNTS') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Accounts`, '_blank');
+      }
+      else if (subject == "Business Studies" ||subject == 'BUSINESS STUDIES') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Business_Studies`, '_blank');
+      }
+      else if (subject == "Economics" ||subject == 'ECONOMICS') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Economics`, '_blank');
+      }
+      else if (subject == "Political Science" ||subject == 'POLITICAL SCIENCE') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Political_Science`, '_blank');
+      }
+      else if (subject == "History" ||subject == 'HISTORY') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=History`, '_blank');
+      } 
+      else if (subject == "Psychology" ||subject == 'PSYCHOLOGY') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Psychology`, '_blank');
+      }
+      else if (subject == "Home Science" ||subject == 'HOME SCIENCE') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Home_Science`, '_blank');
+      }
+       else if (subject == "Punjabi" ||subject == "PUNJABI") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`,'_blank');
+      } 
+      else if (subject == "Biology" ||subject == "BIOLOGY") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      }
+       else if (subject == "Information Technology" ||subject == "INFORMATION TECHNOLOGY") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Information_Technology`, '_blank');
+       } else {
+        alert("Invalid Subject Entered!");
+        document.getElementById("syllabus").style.display = "block";
+      }
+    }
+    else if (classes == 'XII') {
+      let subject = document.getElementById("syllabus-input").value;
+    let classes = document.getElementById("classes").value;
+      if (subject == "English" || subject == 'ENGLISH') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      }
+        else if (subject == "Physical Education" || subject == "PHYSICAL EDUCATION") {
+          window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+            document.getElementById("classes").value
+          }&SUBJECT=Physical_Education`, '_blank');
+      }
+      else if (subject == "Painting" || subject == "PAINTING") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Painting`, '_blank');
+    }
+      else if (subject == "Dance" || subject == 'DANCE') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+       } 
+       else if (subject == "Music Instrumental" || subject == "MUSIC INSTRUMENTAL") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Music_Instrumental`, '_blank');
+    }
+    else if (subject == "Physics" || subject == "PHYSICS") {
+      window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+        document.getElementById("classes").value
+      }&SUBJECT=Physics`, '_blank');
+  }
+       else if (subject == "Chemistry" || subject == 'CHEMISTRY') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Chemistry`, '_blank');
+      } 
+      else if (subject == "Accounts" ||subject == 'ACCOUNTS') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Accounts`, '_blank');
+      }
+      else if (subject == "Business Studies" ||subject == 'BUSINESS STUDIES') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Business_Studies`, '_blank');
+      }
+      else if (subject == "Economics" ||subject == 'ECONOMICS') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Economics`, '_blank');
+      }
+      else if (subject == "Political Science" ||subject == 'POLITICAL SCIENCE') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Political_Science`, '_blank');
+      }
+      else if (subject == "History" ||subject == 'HISTORY') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=History`, '_blank');
+      } 
+      else if (subject == "Psychology" ||subject == 'PSYCHOLOGY') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Psychology`, '_blank');
+      }
+      else if (subject == "Home Science" ||subject == 'HOME SCIENCE') {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Home_Science`, '_blank');
+      }
+       else if (subject == "Punjabi" ||subject == "PUNJABI") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`, '_blank');
+      } 
+      else if (subject == "Biology" ||subject == "BIOLOGY") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=${subject}`,'_blank');
+      }
+       else if (subject == "Information Technology" ||subject == "INFORMATION TECHNOLOGY") {
+        window.open(`http://www.gobindgarhpublicschool.in/Syllabus_2020_21/SubjectSyllabusLogin1.php?CLASS=${
+          document.getElementById("classes").value
+        }&SUBJECT=Information_Technology`, '_blank');
+       } else {
+        alert("Invalid Subject Entered!");
+        document.getElementById("syllabus").style.display = "block";
+      }
+    }
+  });
+  }
+};
+function removeItem() {
+  localStorage.removeItem("show");
+  localStorage.removeItem("name");
+  localStorage.removeItem("syllabus");
+  localStorage.removeItem("section");
+  localStorage.removeItem('classes')
+  if (
+    localStorage.length !== 0 ||
+    localStorage.length !== undefined ||
+    localStorage.length !== null
+  ) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("login").style.display = "block";
+  }
+}
     </script>
   </body>
 </html>
